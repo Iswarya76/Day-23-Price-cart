@@ -7,7 +7,7 @@ function App() {
   const cardDetails=[{
     tierName:"Free",
     price:0,
-    feature:[
+    features:[
       {
         featureName:"Single User"
       },
@@ -41,7 +41,7 @@ function App() {
   {
     tierName:"Plus",
     price:9,
-    feature:[{
+    features:[{
       featureName:"5 Users",
       isBold:true
     },
@@ -72,7 +72,7 @@ function App() {
   {
     tierName:"Pro",
     price:49,
-    feature:[{
+    features:[{
       featureName:"Unlimited Users",
       isBold:true
   },
@@ -103,11 +103,11 @@ function App() {
 }
 ]
   return (
-    <section class="pricing py-5">
-    <div class="container">
-  <div class="row">{
+    <section className="pricing py-5">
+    <div className="container">
+  <div className="row">{
     cardDetails.map((card,index)=>{
-      return <Card key="index" card={card}></Card>
+      return <Card key={index} card={card}></Card>
     })
   } 
   </div>
